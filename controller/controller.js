@@ -36,3 +36,23 @@ module.exports.getInstitutionPos = (req, res) => {
       .json(err);
   })
 };
+
+module.exports.getSinglePo = (req, res) => {
+  console.log('GET Single Po');
+
+  var id = req.params.id;
+
+  const headers = {headers: {'api-key': process.env.POWER_API_KEY}}
+  
+  axios.get(process.env.API_URL+'/rest/po/'+id, headers)
+  .then((result) => {
+    res
+      .json(result.data);
+  })
+  .catch((error) => {
+    console.log("Error getting data");
+    res
+      .status(500)
+      .json(err);
+  })
+};
