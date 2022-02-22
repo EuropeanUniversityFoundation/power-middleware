@@ -56,3 +56,10 @@ module.exports.getSinglePo = (req, res) => {
       .json(err);
   })
 };
+
+module.exports.notFoundRoute = (req, res) => {
+  console.log('Not found route');
+
+  res.status(400);
+  res.json({"message": "Route not found"});
+};

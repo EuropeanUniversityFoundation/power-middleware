@@ -18,12 +18,10 @@ router
 
 router
   .route('/rest/po/:id')
-  .get(controller.getSinglePo);  
+  .get(controller.getSinglePo);
 
 router
-  .route('*').get((req, res) => {
-    res.status(400);
-    res.send('Route not found');
-  });
+  .route('*')
+  .get(controller.notFoundRoute);
 
 module.exports = router;
