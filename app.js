@@ -1,7 +1,20 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 var bodyParser = require('body-parser');
 var routes = require('./routes/routes.js');
+
+// Whitelist domains
+var whitelist = ['http://localhost:3000']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
 
 // Define the port to run on
 app.set('port', 5000);
@@ -14,6 +27,9 @@ app.use((req, res, next) => {
 
 // Set static directory before defining routes
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
+
+// Uncomment to enable CORS options
+/*app.use(cors(corsOptions));*/
 
 // Enable parsing of posted forms
 app.use(bodyParser.urlencoded({ extended: false }));
