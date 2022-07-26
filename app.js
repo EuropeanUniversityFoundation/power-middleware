@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 // Uncomment to enable CORS options
-/*app.use(cors(corsOptions));*/
+app.use(cors(corsOptions));
 
 // Enable parsing of posted forms
 app.use(bodyParser.urlencoded({ extended: false }));
