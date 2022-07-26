@@ -17,7 +17,7 @@ var corsOptions = {
 }
 
 // Define the port to run on
-app.set('port', 5000);
+app.set('port', 4000);
 
 // Add middleware to console log every request
 app.use((req, res, next) => {
