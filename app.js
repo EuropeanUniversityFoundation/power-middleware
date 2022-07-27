@@ -16,7 +16,7 @@ var corsOptions = {
   }
 }
 
-/*const PORT = process.env.PORT || 4000*/
+// const PORT = process.env.PORT || 4000
 
 // Define the port to run on
 app.set('port', 4000);
