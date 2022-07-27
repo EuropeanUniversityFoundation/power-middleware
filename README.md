@@ -43,9 +43,9 @@ For example:
 
 ### Troubleshooting
 
-Sometimes the above steps are not enough.
+Sometimes the steps above are not enough. Therefore, you would need to enable *Phusion Passenger* for *nginx*. 
 
-You would need to enable *Phusion Passenger* with *nginx*. On the *nginx* settings of your sever add the code written below:
+On the *nginx* settings of your server add the code written below:
 
     passenger_enabled on;
 
