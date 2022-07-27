@@ -17,7 +17,7 @@ var whitelist = ['http://localhost:3000', 'https://app.power.uni-foundation.eu']
 }*/
 
 // enable cors
-var corsOption = {
+var corsOptions = {
   origin: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
