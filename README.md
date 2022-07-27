@@ -34,15 +34,18 @@ Then from the command line:
     cd {PROJECT_ROOT}
     npm install             # Install all the dependencies
 
-The next step is to change the *Document root* for the domain. The *Document root* is the location where the static assets can be found. Meanwhile, the *Application root* is the root directory where the app itself is located. Usually, the *Document root* is a directory inside the *Application root* directory (e.g. *public*). Moreover, the *Application root* is where the Application startup file is located (e.g. *app.js* or *index.js*).
+The next step is to change the *Document root* and the *Application root* for the domain. The *Document root* is the location where the static assets can be found. Usually, the *Document root* is a directory inside the *Application root* directory (e.g. *public*). Moreover, the *Application root* is where the Application startup file is located (e.g. *app.js* or *index.js*).
+
+For example:
+
+- *Application root*: `{PROJECT_ROOT}`
+- *Document root*: `{PROJECT_ROOT}/public`
 
 ### Troubleshooting
 
 Sometimes the above steps are not enough.
 
-You would need to enable *Phusion Passenger* with *nginx*:
-
-On the *nginx* settings add the code written below:
+You would need to enable *Phusion Passenger* with *nginx*. On the *nginx* settings of your sever add the code written below:
 
     passenger_enabled on;
 
