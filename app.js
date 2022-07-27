@@ -6,7 +6,7 @@ var routes = require('./routes/routes.js');
 
 // Whitelist domains
 var whitelist = ['http://localhost:3000', 'https://app.power.uni-foundation.eu']
-var corsOptions = {
+/*var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
@@ -14,7 +14,15 @@ var corsOptions = {
       callback(new Error('Not allowed'))
     }
   }
-}
+}*/
+
+// enable cors
+var corsOption = {
+  origin: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  exposedHeaders: ['x-auth-token']
+};
 
 // const PORT = process.env.PORT || 4000
 
