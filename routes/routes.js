@@ -1,11 +1,14 @@
 var express = require('express');
 var router = express.Router();
+const path = require("path");
 
 var controller = require('../controller/controller.js');
 
+console.log(__dirname);
+
 router.route('/').get((req, res) => {
   res.status(200);
-  res.send('App is working');
+  res.sendFile('views/homepage.html', {root: '.'});
 });
 
 router
