@@ -2,6 +2,7 @@ var express = require('express');
 var cors = require('cors');
 var app = express();
 var bodyParser = require('body-parser');
+const path = require("path");
 var routes = require('./routes/routes.js');
 
 // Whitelist domains
