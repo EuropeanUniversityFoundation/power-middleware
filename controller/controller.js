@@ -1,5 +1,5 @@
 const axios = require('axios');
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports.getPublicPos = (req, res) => {
   console.log('GET Public Pos');
