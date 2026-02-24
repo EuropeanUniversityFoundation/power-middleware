@@ -24,7 +24,6 @@ router
   .get(controller.getSinglePo);
 
 router
-  .route('*')
-  .get(controller.notFoundRoute);
+  .use(controller.notFoundRoute);
 
 module.exports = router;

@@ -15,7 +15,7 @@ module.exports.getPublicPos = (req, res) => {
     console.log("Error getting data");
     res
       .status(500)
-      .json(err);
+      .json(error);
   })
 };
 
@@ -33,7 +33,7 @@ module.exports.getInstitutionPos = (req, res) => {
     console.log("Error getting data");
     res
       .status(500)
-      .json(err);
+      .json(error);
   })
 };
 
@@ -53,7 +53,7 @@ module.exports.getSinglePo = (req, res) => {
     console.log("Error getting data");
     res
       .status(500)
-      .json(err);
+      .json(error);
   })
 };
 
